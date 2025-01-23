@@ -1,5 +1,6 @@
 # holamundo_react
 Ejercicios de clase de hola mundo
+Link del tutorial: https://www.youtube.com/watch?v=yIr_1CasXkM
 
 # React + TypeScript + Vite
 
