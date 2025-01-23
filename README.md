@@ -1,6 +1,9 @@
 # holamundo_react
 Ejercicios de clase de hola mundo
+
 Link del tutorial: https://www.youtube.com/watch?v=yIr_1CasXkM
+
+Documentación de bootstrap: https://getbootstrap.com/docs/5.3/getting-started/introduction/
 
 # React + TypeScript + Vite
 
