@@ -4,42 +4,46 @@ import List from "./components/List";
 import { useState } from "react";
 
 
+function realizarOperacion(e){
+  e.preventDefault();
+  const v1 = parseInt(e.target.valor1.value);
+  const v2 = parseInt(e.target.valor2.value);
+  const suma = v1 + v2;
+  alert("La suma es :"+suma)
+}
+
+
 function App() {
 
-const [data, setData] = useState(["Goku", "Tanjiro", "Eren"]);
-
-/*
-const [isLoading, setIsLoading] = useState(false);
-const handleClick = () => setIsLoading(!isLoading);
-
-  const list: string[] = ["Goku", "Tanjiro", "Eren"]
-
-  const handleSelect = (elemento: string) => {
-    console.log("imprimiendo", elemento);
-  };
-
-  const contenido = list.length !== 0 && (<List data={list} onSelect={handleSelect} />);
-
   return (
-    <Card>
-      <CardBody title="Hola Mundo" text="Este es el texto" />
-      {contenido}
 
-      <Button isLoading={isLoading} onClick={handleClick}>
-        Hola mundo
-      </Button>
-    </Card>
-  );*/
+    <>
+    <form onSubmit={realizarOperacion}>
+    <div className="input-group mb-3">
+      <span className="input-group-text">S/.</span>
+      <input type="number" name="valor1" className="form-control" placeholder="Monto cuota 1"
+        aria-label="Username" aria-describedby="basic-addon1" />
+    </div>
+      <div className="input-group mb-3">
+      <span className="input-group-text">S/.</span>
+        <input type="number" name="valor2" className="form-control" placeholder="Monto cuota 2"
+          aria-label="Username" aria-describedby="basic-addon1" />
 
-const addMinion = () => setData([...data, "Minion"]);
-const delMinion = () => setData(data.slice(0,-1));
-return (
-  <Card> 
-    <Button onClick={addMinion}>Agregar</Button>
-    <Button onClick={delMinion}>Eliminar</Button>
-    <List data={data}/>
-  </Card>
-)
+      </div>
+      <div className="input-group mb-3">
+      <button type="submit" className="btn btn-primary">Sumar</button>
+
+      </div>
+
+      <div className="input-group mb-3">
+      <span className="input-group-text">S/.</span>
+        <input type="text" className="form-control" placeholder="Monto Total"
+          aria-label="Username" aria-describedby="basic-addon1" />
+
+      </div>
+      </form>
+    </>
+  )
 
 }
 
