@@ -1,6 +1,7 @@
 import Card, { CardBody } from "./components/Card";
 import Button from "./components/Button";
 import List from "./components/List";
+import Input from "./components/input";
 import { useState } from "react";
 
 
@@ -19,34 +20,16 @@ function App() {
   return (
 
     <>
-    
-    <div className="input-group mb-3">
-      <span className="input-group-text">S/.</span>
-      <input value={input1} onChange={(e)=> setInput1(e.target.value)}
-      type="number" name="valor1" 
-      className="form-control" placeholder="Monto cuota 1"
-        aria-label="Username" aria-describedby="basic-addon1" />
-    </div>
-      <div className="input-group mb-3">
-      <span className="input-group-text">S/.</span>
-        <input value={input2} onChange={(e)=> setInput2(e.target.value)}
-        type="number" name="valor2" 
-        className="form-control" placeholder="Monto cuota 2"
-          aria-label="Username" aria-describedby="basic-addon1" />
 
-      </div>
-      <div className="input-group mb-3">
-      <button onClick ={handleSum} type="submit" className="btn btn-primary">Sumar</button>
-
-      </div>
+      <Input value={input1} onChange={(e) => setInput1(e.target.value)} placeholder={"Monto cuota 1"} />
+      <Input value={input2} onChange={(e) => setInput2(e.target.value)} placeholder={"Monto cuota 2"} />
 
       <div className="input-group mb-3">
-      <span className="input-group-text">S/.</span>
-        <input value={sum} type="text" className="form-control" placeholder="Monto Total" 
-          aria-label="Username" aria-describedby="basic-addon1" />
-
+        <button onClick={handleSum} type="submit" className="btn btn-primary">Sumar</button>
       </div>
-    
+
+      <Input value={sum} onChange={(e) => setInput2(e.target.value)} placeholder={"Monto Total"} />
+
     </>
   )
 
