@@ -1,5 +1,6 @@
 import Card, { CardBody } from "./components/Card/Card";
-import Button from "./components/Button";
+import Button from "./components/Button/Button";
+// import Button from "./components/Button";
 import List from "./components/List";
 import Input from "./components/input";
 import Counter from "./components/Counter";
@@ -23,6 +24,8 @@ function App() {
   return (
 
     <>
+      <Button blue><p>Azul</p></Button>
+      <br /><br />
       <Card />
       <br />
       <Counter />
@@ -32,6 +35,9 @@ function App() {
       <br />
       <NameForm />
       <br />
+
+
+
       <Input value={input1} onChange={(e) => setInput1(e.target.value)} placeholder={"Monto cuota 1"} />
       <Input value={input2} onChange={(e) => setInput2(e.target.value)} placeholder={"Monto cuota 2"} />
 
