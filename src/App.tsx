@@ -2,7 +2,8 @@ import Card, { CardBody } from "./components/Card";
 import Button from "./components/Button";
 import List from "./components/List";
 import Input from "./components/input";
-import Counter from "./components/Counter"
+import Counter from "./components/Counter";
+import ToggleButton from "./components/ToggleButton";
 import { useState } from "react";
 
 
@@ -23,6 +24,9 @@ function App() {
     <>
 
       <Counter />
+      <br />
+      <ToggleButton />
+      <br />
       <br />
       <Input value={input1} onChange={(e) => setInput1(e.target.value)} placeholder={"Monto cuota 1"} />
       <Input value={input2} onChange={(e) => setInput2(e.target.value)} placeholder={"Monto cuota 2"} />
