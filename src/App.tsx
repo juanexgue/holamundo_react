@@ -1,4 +1,4 @@
-import Card, { CardBody } from "./components/Card";
+import Card, { CardBody } from "./components/Card/Card";
 import Button from "./components/Button";
 import List from "./components/List";
 import Input from "./components/input";
@@ -23,7 +23,8 @@ function App() {
   return (
 
     <>
-
+      <Card />
+      <br />
       <Counter />
       <br />
       <ToggleButton />

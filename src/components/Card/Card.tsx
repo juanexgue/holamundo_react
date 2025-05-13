@@ -1,15 +1,23 @@
 import { ReactNode } from "react";
+import styles from "./Card.module.css";
 
-interface CardProps {
+
+const Card = () => {
+    return (
+        <div className={styles.card}>
+            Soy una card!
+        </div>
+    )
+}
+
+/*interface CardProps {
     children: ReactNode;
 }
 
 function Card(props: CardProps) {
     const { children } = props;
     return (
-        <div className="card" style={{
-            width: '350px',
-        }}>
+        <div className="card">
             <div className="card-body">
                 {children}
             </div>
@@ -31,6 +39,6 @@ export function CardBody(props: CardBodyProps) {
             <p className="card-text">{text}</p>
         </>
     );
-}
+}*/
 
 export default Card;
