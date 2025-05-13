@@ -5,7 +5,7 @@ const ToggleButton = () => {
 
     return (
         <button onClick={() => setIsActive(!isActive)}>
-            {isActive ? "Activo" : "Inactivo"}
+            {isActive ? "Activo ✅" : "Inactivo ⛔"}
         </button>
     )
 }
