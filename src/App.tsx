@@ -1,6 +1,7 @@
 import Card, { CardBody } from "./components/Card/Card";
 import Button from "./components/Button/Button";
-import UserList from "./components/UserList/UserList"
+import UserList from "./components/UserList/UserList";
+import SearchPosts from "./components/SearchPosts/SearchPosts";
 // import Button from "./components/Button";
 import List from "./components/List";
 import Input from "./components/input";
@@ -25,6 +26,8 @@ function App() {
   return (
 
     <>
+      <SearchPosts />
+      <br />
       <UserList />
       <br />
       <Button><p>Azul</p></Button>
