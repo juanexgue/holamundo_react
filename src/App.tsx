@@ -2,6 +2,7 @@ import Card, { CardBody } from "./components/Card/Card";
 import Button from "./components/Button/Button";
 import UserList from "./components/UserList/UserList";
 import SearchPosts from "./components/SearchPosts/SearchPosts";
+import CounterWithCustomHook from "./components/CounterWithCustomHook/CounterWithCustomHook";
 // import Button from "./components/Button";
 import List from "./components/List";
 import Input from "./components/input";
@@ -26,8 +27,12 @@ function App() {
   return (
 
     <>
+      <CounterWithCustomHook />
+      <br />
+
       <SearchPosts />
       <br />
+
       <UserList />
       <br />
       <Button><p>Azul</p></Button>
