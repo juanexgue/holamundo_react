@@ -10,7 +10,43 @@ import Input from "./components/input";
 import Counter from "./components/Counter";
 import ToggleButton from "./components/ToggleButton";
 import NameForm from "./components/NameForm";
-import { useState } from "react";
+import { createContext, useContext, useState } from "react";
+
+const ThemeContext = createContext();
+
+function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState("light")
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"))
+  }
+
+  return (
+    <>
+      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        {children}
+      </ThemeContext.Provider>
+    </>
+  )
+}
+
+function ThemeButton() {
+  const { theme, toggletheme } = useContext(ThemeContext);
+
+  return (
+    <>
+      <button
+        onClick={toggletheme}
+        style={{
+          backgroundColor: theme === "light" ? "#FFF" : "#333",
+          color: theme === "light" ? "#000" : "#FFF"
+        }}
+      >
+        Cambiar tema
+      </button>
+    </>
+  )
+}
 
 
 function App() {
@@ -26,8 +62,11 @@ function App() {
   };
 
   return (
-
     <>
+      <ThemeProvider>
+        <ThemeButton />
+      </ThemeProvider>
+      <br /><br />
       <CounterUseReducer />
       <br /><br />
       <CounterWithCustomHook />
