@@ -3,6 +3,7 @@ import Button from "./components/Button/Button";
 import UserList from "./components/UserList/UserList";
 import SearchPosts from "./components/SearchPosts/SearchPosts";
 import CounterWithCustomHook from "./components/CounterWithCustomHook/CounterWithCustomHook";
+import CounterUseReducer from "./components/CounterUseReducer/CounterUseReducer";
 // import Button from "./components/Button";
 import List from "./components/List";
 import Input from "./components/input";
@@ -27,6 +28,8 @@ function App() {
   return (
 
     <>
+      <CounterUseReducer />
+      <br /><br />
       <CounterWithCustomHook />
       <br />
 
